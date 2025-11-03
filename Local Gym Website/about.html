@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - KANISHK's GYM</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(https://media.istockphoto.com/id/1427221641/photo/man-training-with-battle-rope-in-gym-gym.jpg?s=1024x1024&w=is&k=20&c=ORjCa80yBSQZK21-I-6Sa9J4da6R5BTz0MGIMAUROvE=) no-repeat center center/cover;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .left img {
+            height: 64px;
+            width: 64px;
+            border-radius: 50%;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .left div {
+            font-weight: bold;
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        .mid ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #333;
+            padding: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar li a:hover {
+            background-color: #f5f8f9;
+            text-decoration: underline;
+            border-radius: 10px;
+        }
+
+        .right .btn {
+            margin: 5px;
+            padding: 8px 18px;
+            background-color: #dee8e8;
+            border-radius: 20px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.4s ease, transform 0.2s ease;
+        }
+
+        .right .btn:hover {
+            background-color: #0abced;
+            transform: scale(1.05);
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 60px auto;
+            background-color: rgba(255, 255, 255, 0.92);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 12px 0px gray;
+            animation: slideUp 1s ease-out;
+        }
+
+        .about-container h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #0a72a3;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .mid ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .about-container {
+                margin: 40px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="left">
+            <img src="Logo.jpeg" alt="Logo">
+            <div>KANISHK's GYM</div>
+        </div>
+        <nav class="mid">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="fitness.html">Fitness Calculator</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="right">
+            <button class="btn">Call us</button>
+            <button class="btn">E-mail us</button>
+        </div>
+    </header>
+
+    <div class="about-container">
+        <h2>About KANISHK's GYM</h2>
+        <p>
+            Welcome to <span class="highlight">KANISHK's GYM</span> – where strength meets community! Founded with a vision to transform lives through fitness, our center is more than just a gym — it’s a lifestyle. Whether you're just starting your fitness journey or you're a seasoned athlete, our state-of-the-art equipment, certified trainers, and friendly environment are designed to help you succeed.
+        </p>
+        <p>
+            At KANISHK's GYM, we believe in a holistic approach to health and wellness. That’s why we offer a range of fitness programs including weight training, cardio sessions, HIIT, yoga, and personalized training plans. Our aim is to motivate and support every individual to reach their full potential – physically, mentally, and emotionally.
+        </p>
+        <p>
+            Join a growing family of fitness enthusiasts who are committed to better living. We're open 7 days a week and provide flexible membership plans to fit your schedule and goals.
+        </p>
+        <p>
+            <span class="highlight">Train with purpose. Transform your life. Become unstoppable – only at KANISHK's GYM.</span>
+        </p>
+    </div>
+
+</body>
+
+</html>

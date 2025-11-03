@@ -1,0 +1,414 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Centre</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background: url(background.jpg);
+
+        }
+
+
+        .left {
+
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            top: 5px;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 30px;
+
+
+        }
+
+        .mid {
+            border: 2px solid rgb(40, 151, 235);
+            display: block;
+            margin: 5px auto;
+            width: 50%;
+            background-color: rgb(40, 151, 235);
+            border-radius: 32px;
+        }
+
+        .right {
+
+            display: inline-block;
+            position: absolute;
+            right: 34px;
+            top: 5px;
+
+        }
+
+        .navbar {
+            display: inline-block;
+            
+
+        }
+
+        .navbar li {
+            display: inline-block;
+            font-size: 26px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            padding: 20px;
+            color: black;
+
+        }
+
+        .navbar li a:hover {
+            background-color: rgba(245, 248, 249, 0.953);
+            text-decoration: underline;
+        }
+
+        .btn {
+            margin: 8px 10px;
+            padding: 4px 14px;
+            background-color: #dee8e8;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .btn:hover {
+            background-color: rgba(10, 188, 237, 0.868);
+        }
+
+        .form {
+
+            margin-top: 140px;
+
+        }
+
+        .inputs {
+            display: block;
+            margin-left: 300px;
+            border-radius: 40px;
+            width: 500px;
+            position: relative;
+            padding: 16px;
+            border: 2px solid black;
+        }
+
+        .gen {
+            margin-left: 320px;
+        }
+
+        #gender {
+            display: inline;
+        }
+
+        h2 {
+            margin-left: 370px;
+        }
+
+        .submit {
+            margin-left: 345px;
+            width: 270px;
+            color: black;
+            background-color: #357ece9e;
+            border: 2px solid black;
+            border-radius: 40px;
+        }
+
+        .submit:hover {
+            background-color: rgba(208, 20, 20, 0.793);
+        }
+
+        .submit:active {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="left">
+        <img src="Logo.jpeg" alt="" height="94px" width="84px">
+        <div>KANISHK's GYM</div>
+    </div>
+    <div class="mid">
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Fitness Calculator</a></li>
+            <li><a href="#">Contact us</a></li>
+
+        </ul>
+    </div>
+    <div class="right">
+        <button class="btn">Call us</button><button class="btn">E-mail us</button>
+    </div>
+    <div class="form">
+        <h2>Fill this form to join</h2>
+        <form action="">
+            <input type="text" name="" id="name" placeholder="Enter Your Name" class="inputs">
+            <br>
+            <input type="text" name="age" id="number" class="inputs" placeholder="Enter Your Age">
+            <br>
+            <input type="text" name="" id="Number" class="inputs" placeholder="Enter Your Contact Number">
+            <br>
+            <input type="email" name="" id="email" class="inputs" placeholder="Enter Your E-mail">
+            <br>-
+            <input type="text" name="" id="locality" class="inputs" placeholder="Enter Your Locality">
+            <br>
+            <div class="gen"><span>Male</span><input type="radio" name="Gender" id="gender"> <span>Female</span><input
+                    type="radio" name="Gender" id="gender"></div>
+            <br>
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+<script src="first.js"></script>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Centre</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(https://media.istockphoto.com/id/1427221641/photo/man-training-with-battle-rope-in-gym-gym.jpg?s=1024x1024&w=is&k=20&c=ORjCa80yBSQZK21-I-6Sa9J4da6R5BTz0MGIMAUROvE=) no-repeat center center/cover;
+            color: black;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .left img {
+            height: 64px;
+            width: 64px;
+            border-radius: 50%;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .left div {
+            font-weight: bold;
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        .mid ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #333;
+            padding: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar li a:hover {
+            background-color: #f5f8f9;
+            text-decoration: underline;
+            border-radius: 10px;
+        }
+
+        .right .btn {
+            margin: 5px;
+            padding: 8px 18px;
+            background-color: #dee8e8;
+            border-radius: 20px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.4s ease, transform 0.2s ease;
+        }
+
+        .right .btn:hover {
+            background-color: #0abced;
+            transform: scale(1.05);
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 100px auto;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px gray;
+            animation: slideUp 1s ease-out;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .inputs {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #333;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .inputs:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.4);
+            outline: none;
+        }
+
+        .gen {
+            margin: 20px 0;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .submit {
+            display: block;
+            width: 60%;
+            margin: 20px auto 0;
+            padding: 14px;
+            background-color: #357ece9e;
+            border: 2px solid black;
+            border-radius: 40px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit:hover {
+            background-color: rgba(208, 20, 20, 0.793);
+            transform: scale(1.05);
+        }
+
+        .submit:active {
+            font-size: 17px;
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .mid ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .form-container {
+                margin: 40px 20px;
+            }
+
+            .submit {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="left">
+            <img src="Logo.jpeg" alt="Logo">
+            <div>KANISHK's GYM</div>
+        </div>
+        <nav class="mid">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="fitness.html">Fitness Calculator</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="right">
+            <button class="btn">Call us</button>
+            <button class="btn">E-mail us</button>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <h2>Fill this form to join</h2>
+        <form>
+            <input type="text" id="name" placeholder="Enter Your Name" class="inputs">
+            <input type="text" name="age" id="age" class="inputs" placeholder="Enter Your Age">
+            <input type="text" id="contact" class="inputs" placeholder="Enter Your Contact Number">
+            <input type="email" id="email" class="inputs" placeholder="Enter Your E-mail">
+            <input type="text" id="locality" class="inputs" placeholder="Enter Your Locality">
+
+            <div class="gen">
+                <label><input type="radio" name="Gender"> Male</label>
+                <label><input type="radio" name="Gender"> Female</label>
+            </div>
+
+            <input type="submit" value="Submit" class="submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
